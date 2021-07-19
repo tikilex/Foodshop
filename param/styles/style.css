@@ -1,0 +1,67 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.image-container{
+    width: 100%;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../images/patternCover.png');
+    justify-content: center;
+}
+.container {
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header {
+    display:flex;
+    height: 80px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-nav-item, .header-right-item, .header-title {
+    padding: 0;
+    
+}
+.header-nav-items, .header-right-items {
+    list-style-type: none;
+    display: flex;
+}
+.header-nav-item {
+    padding-left: 15px ;
+}
+.header-right-item
+{
+    padding-right: 15px;
+}
+
+.header-nav-item:hover, .header-right-item:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+.header-nav-item,.header-right-item
+{
+    font-size:  20px;
+}
+.header-title
+{
+    font-size: 40px;
+    text-align: center;
+}
+.header-title:hover
+{
+    cursor: pointer;
+}
+.header-item
+{
+    display: flex;
+}
+.main
+{
+    height: 1000px;
+}

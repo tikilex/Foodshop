@@ -12,6 +12,7 @@
 <tr>
 <th scope="col">Наименование</th>
 <th scope="col">Стоимость</th>
+<th scope="col">Категория</th>
 </tr>
 </thead>
 <tbody>
@@ -19,7 +20,7 @@
 for(x=0;x < arr.length;x++){
 var serializedUser = JSON.stringify(arr[x]);
 var user = JSON.parse(serializedUser);
-document.write("<tr><td>" + user.name + "</td><td>" + user.cost + "</td></tr>");
+document.write("<tr><td>" + user.Наименование + "</td><td>" + user.Стоимость + "</td></tr>"+ user.Категория+ "</td></tr>");
 }
 </script>
 </tbody></table>

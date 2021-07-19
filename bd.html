@@ -1,0 +1,52 @@
+<HTML>
+    <head>
+        <title>Foodshop</title>
+        <link rel="stylesheet" href="param/styles/reset.css">
+        <link rel="stylesheet" href="param/styles/style.css">
+        <script src="param/test.db"></script>
+
+    </head>
+    <body>
+        <table class="table">
+<thead>
+<tr>
+<th scope="col">Наименование</th>
+<th scope="col">Стоимость</th>
+</tr>
+</thead>
+<tbody>
+<script>
+for(x=0;x < arr.length;x++){
+var serializedUser = JSON.stringify(arr[x]);
+var user = JSON.parse(serializedUser);
+document.write("<tr><td>" + user.name + "</td><td>" + user.cost + "</td></tr>");
+}
+</script>
+</tbody></table>
+        <div class="image-container">
+        <div class="container">
+            <div class="header">
+                <div class="header-nav-container header-item">
+                    <ul class="header-nav-items">
+                      <li onclick="window.location.href='about.html'" class="header-nav-item">О нас</li>
+                      <li onclick="window.location.href='contacts.html'" class="header-nav-item">Контакты</li>
+                    </ul>
+                  </div>
+                  <div class="header-title-container header-item">
+                    <span onclick="window.location.href='index.html'" class="header-title"> Foodshop </span>
+                  </div>
+                  <div class="header-right-container header-item">
+                      <span class="header-right-item"onclick="window.location.href='cart.html'">Корзина</span>
+                      <span onclick="window.location.href='bd.html'">БД</span>
+                  </div>
+            </div>
+            <div class="main">
+                
+            </div>
+        </div>
+        </div>
+        <script src="param/js/main.js"></script>
+        <script src="jquery-3.3.1.min.js"></script>
+        
+    </body>
+</HTML>

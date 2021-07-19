@@ -4,26 +4,9 @@
         <link rel="stylesheet" href="param/styles/reset.css">
         <link rel="stylesheet" href="param/styles/style.css">
         <script src="param/test.db"></script>
-
     </head>
     <body>
-        <table class="table">
-<thead>
-<tr>
-<th scope="col">Наименование</th>
-<th scope="col">Стоимость</th>
-<th scope="col">Категория</th>
-</tr>
-</thead>
-<tbody>
-<script>
-for(x=0;x < arr.length;x++){
-var serializedUser = JSON.stringify(arr[x]);
-var user = JSON.parse(serializedUser);
-document.write("<tr><td>" + user.Наименование + "</td><td>" + user.Стоимость + "</td></tr>"+ user.Категория+ "</td></tr>");
-}
-</script>
-</tbody></table>
+        
         <div class="image-container">
         <div class="container">
             <div class="header">
@@ -37,17 +20,34 @@ document.write("<tr><td>" + user.Наименование + "</td><td>" + user.�
                     <span onclick="window.location.href='index.html'" class="header-title"> Foodshop </span>
                   </div>
                   <div class="header-right-container header-item">
+                      <ul class="header-right-items" >
                       <span class="header-right-item"onclick="window.location.href='cart.html'">Корзина</span>
                       <span onclick="window.location.href='bd.html'">БД</span>
                   </div>
             </div>
             <div class="main">
-                
+                <table class="table">
+                    <thead>
+                    <tr>
+                    <th scope="col">Наименование</th>
+                    <th scope="col">Стоимость</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <script>
+                    for(x=0;x < arr.length;x++){
+                    var serializedUser = JSON.stringify(arr[x]);
+                    var user = JSON.parse(serializedUser);
+                    document.write("<tr><td>" + user.Наименование + "</td><td>" + user.Стоимость + "</td></tr>");
+                    }
+                    </script>
+                    </tbody></table>
             </div>
         </div>
         </div>
         <script src="param/js/main.js"></script>
         <script src="jquery-3.3.1.min.js"></script>
+        
         
     </body>
 </HTML>

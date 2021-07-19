@@ -8,24 +8,31 @@
     </head>
     <body>
         <div class="image-container">
-        <div class="container">
+        
             <div class="header">
                 <div class="header-nav-container header-item">
                     <ul class="header-nav-items">
-                      <li onclick="window.location.href='about.html'" class="header-nav-item">О нас</li>
-                      <li onclick="window.location.href='contacts.html'" class="header-nav-item">Контакты</li>
+                      <li onclick="window.location.href='about.html'" class="header-nav-item header-nav-about"></li>
+                      <li onclick="window.location.href='contacts.html'" class="header-nav-item header-nav-contacts"></li>
                     </ul>
                   </div>
                   <div class="header-title-container header-item">
-                    <span onclick="window.location.href='index.html'" class="header-title"> Foodshop </span>
+                    <div class="header-logo" onclick="window.location.href='index.html'"></div>
                   </div>
                   <div class="header-right-container header-item">
-                      <span class="header-right-item"onclick="window.location.href='cart.html'">Корзина</span>
-                      <span onclick="window.location.href='bd.html'">БД</span>
+                      <ul class="header-right-items">
+                      <li class="header-right-item header-right-cart" onclick="window.location.href='cart.html'"></li>
+                      <li class="header-right-item header-nav-reviews" onclick="window.location.href='bd.html'"></li>
+                      </ul>
                   </div>
             </div>
+            <div class="container"></div>
             <div class="main">
-                
+                <div class="menu">
+                    <div onclick="window.location.href='food.html'" class="first-img-menu img-menu"></div>
+                    <div onclick="window.location.href='drinks.html'" class="second-img-menu img-menu "></div>
+                    <div onclick="window.location.href='others.html'" class="third-img-menu img-menu"></div>
+                </div>
             </div>
         </div>
         </div>

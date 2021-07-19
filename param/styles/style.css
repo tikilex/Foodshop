@@ -65,30 +65,29 @@ html, body {
 .header-nav-item,.header-right-item
 {
     font-size:  20px;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 20px;
 }
 .header-nav-about
 {
     background-image: url('../images/about.png');
-    width: 57px;
-    height: 16px;
 }
 .header-nav-contacts
 {
     background-image: url('../images/contacts.png');
-    width: 93px;
-    height: 15px; 
+}
+.header-nav-index
+{
+    background-image: url('../images/main.png');
 }
 .header-right-cart
 {
-    background-image: url('../images/cart.png');
-    width: 81px;
-    height: 19px;  
+    background-image: url('../images/cart.png'); 
 }
-.header-nav-reviews
+.header-right-reviews
 {
     background-image: url('../images/reviews.png');
-    width: 77px;
-    height: 16px; 
 }
 .header-title
 {
@@ -103,6 +102,9 @@ html, body {
 .main
 {
     height: 888px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .menu
 {
@@ -138,4 +140,41 @@ html, body {
     padding-bottom: 50px;
     margin-left: 15px;
 }
+.about-us
+{
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 45px;
+    text-align: center;
+}
+.phone
+{
+    background-image: url('../images/phone.png');
+    width: 900px;
+    height: 100px;
+    background-repeat: no-repeat;
+    justify-content: center;
+    margin-left: 150px;
+} 
+.review-text
+{
+    display: flex;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 15px;
+
+}
+.review-biglogo
+{
+    background-image: url('../images/biglogo.png');
+    width: 500px;
+    height: 500px;
+    margin-left: 150px;
+}
+.review-biglogo:hover
+{
+    cursor: pointer;
+    opacity: 0.75;
+}
+
 

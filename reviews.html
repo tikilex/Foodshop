@@ -1,8 +1,9 @@
 <HTML>
     <head>
-        <title>Корзина</title>
+        <title>Отзывы</title>
         <link rel="stylesheet" href="param/styles/reset.css">
         <link rel="stylesheet" href="param/styles/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="57x57" href="param/images/logo/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="param/images/logo/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="param/images/logo/apple-icon-72x72.png">
@@ -23,26 +24,38 @@
     </head>
     <body>
         <div class="image-container">
+    
             <div class="header">
                 <div class="header-nav-container header-item">
                     <ul class="header-nav-items">
+                      <li onclick="window.location.href='index.html'" class="header-nav-item header-nav-index"></li>
                       <li onclick="window.location.href='about.html'" class="header-nav-item header-nav-about"></li>
                       <li onclick="window.location.href='contacts.html'" class="header-nav-item header-nav-contacts"></li>
                     </ul>
                   </div>
                   <div class="header-title-container header-item">
-                    <div class="header-logo" onclick="window.location.href='index.html'"></div>
                   </div>
                   <div class="header-right-container header-item">
                       <ul class="header-right-items">
+                        
                       <li class="header-right-item header-right-cart" onclick="window.location.href='cart.html'"></li>
-                      <li class="header-right-item header-right-reviews" onclick="window.location.href='reviews.html'"></li>
                       </ul>
                   </div>
             </div>
-            <div class="container">
-            <div class="main">
-                <div class="menu">
-                    </div>
+                <div class="main">
+                    <ul>
+                        <form action="send.php" method="post" _lpchecked="1">
+                            <stan class="review-text">Оставьте свой отзыв</stan>
+                            <stan class="review-text">Ваше имя</stan> 
+                            <input type="text" name="first_name" placeholder="Обязательное поле"><br>
+                            <stan class="review-text" > Email:</stan> 
+                            <input type="text" name="email" required="" placeholder="Обязательное поле"><br>
+                            <stan class="review-text">Сообщение:</stan><br>
+                            <textarea rows="10px" name="message" placeholder="Обязательное поле"></textarea><br>
+                            <input class="review-text"  type="submit" name="submit" value="Отправить">
+                            </form>
+                    </ul>
+                    <div class="review-biglogo" onclick="window.location.href='index.html'"></div>
+                </div>
     </body>
 </HTML>

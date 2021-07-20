@@ -42,8 +42,8 @@ html, body {
     width: 150px;
     height: 150px;
     margin-top: 75px;
-    margin-left: 8px;
-}
+    margin-right: 8px;
+   }
 .header-logo:hover
 {
     cursor: pointer;
@@ -129,17 +129,7 @@ html, body {
     background-image: url('../images/fp.png');
     margin-right: 15px;
 }
-.second-img-menu
-{
-    background-image: url('../images/sp.png');
-    
-}
-.third-img-menu
-{
-    background-image: url('../images/tp.png');
-    padding-bottom: 50px;
-    margin-left: 15px;
-}
+
 .about-us
 {
     font-family: 'Rubik Mono One', sans-serif;

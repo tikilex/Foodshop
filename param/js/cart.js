@@ -72,3 +72,50 @@ function checkCart() {
 function saveCartToLS() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
+
+$(document).ready(function () {
+    loadCart();
+    $('.send-email').on('click', sendEmail); // отправить письмо с заказом
+ });
+ function loadCart() {
+    //проверяю есть ли в localStorage запись cart
+    if (localStorage.getItem('cart')) {
+        // если есть - расширфровываю и записываю в переменную cart
+        cart = JSON.parse(localStorage.getItem('cart'));
+            showCart();
+        }
+    else {
+        $('.main-cart').html('Корзина пуста!');
+    }
+}
+function sendEmail() {
+    var ename = $('#ename').val();
+    var email = $('#email').val();
+    var ephone = $('#ephone').val();
+    if (ename!='' && email!='' && ephone!='') {
+        if (isEmpty(cart)) {
+            $.post(
+                "core/mail.php",
+                {
+                    "ename" : ename,
+                    "email" : email,
+                    "ephone" : ephone,
+                    "cart" : cart
+                },
+                function(data){
+                    if (data==1) {
+                        alert('Заказ отправлен');
+                    }
+                    else {
+                        alert('Повторите заказ');
+                    }
+                }
+            );
+        }
+        else {
+            alert('Корзина пуста');
+        }
+    }
+    else {
+        alert('Заполните поля');
+    }

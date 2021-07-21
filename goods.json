@@ -16,5 +16,24 @@
     "cost" : 22,
     "description" : "Спелая и сочная клубника",
     "image" : "param/images/strawberry.png"
+  },
+  "11296" : {
+    "name" : "Томат",
+    "cost" : 10,
+    "description" : "...",
+    "image" : "param/images/tomato.png"
+
+  },
+  "11297" : {
+    "name" : "Вишня",
+    "cost" : 8,
+    "description" : "Cherry",
+    "image" : "param/images/cherry.png"
+  },
+  "11298" : {
+    "name" : "Бургер",
+    "cost" : 22,
+    "description" : "ммм",
+    "image" : "param/images/burger.png"
   }
 }

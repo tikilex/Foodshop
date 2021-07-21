@@ -1,16 +1,16 @@
-var cart = {}; //корзина
+var cart = {}; 
 
 
 $.getJSON('goods.json', function (data) {
-    var goods = data; //все товары в массиве
+    var goods = data; 
     // console.log(goods);
     checkCart();
     //console.log(cart);
-    showCart(); //вывожу товары на страницу
+    showCart(); 
 
     function showCart() {
         if ($.isEmptyObject(cart)) {
-            //корзина пуста
+            
             var out = 'Корзина пуста. Добавьте товар в корзину <a href="index.html">главная страница</a>';
             $('#my-cart').html(out);
         }
@@ -18,7 +18,7 @@ $.getJSON('goods.json', function (data) {
             var out = '';
             for (var key in cart) {
                 out += '<button class="delete" data-art="' + key + '" >x</button>';
-                out += '<img src="' + goods[key].image + '" width="48">';
+                out += '<img src="' + goods[key].image + '" width="128">';
                 out += goods[key].name;
                 out += '<button class="minus" data-art="' + key + '">-</button>';
                 out += cart[key];
@@ -36,7 +36,7 @@ $.getJSON('goods.json', function (data) {
     function plusGoods() {
         var articul = $(this).attr('data-art');
         cart[articul]++;
-        saveCartToLS(); //сохраняю корзину в localStorage
+        saveCartToLS(); 
         showCart();
     }
 
@@ -48,14 +48,14 @@ $.getJSON('goods.json', function (data) {
         else {
             delete cart[articul];
         }
-        saveCartToLS();//сохраняю корзину в localStorage
+        saveCartToLS();
         showCart();
     }
 
     function deleteGoods() {
         var articul = $(this).attr('data-art');
         delete cart[articul];
-        saveCartToLS();//сохраняю корзину в localStorage
+        saveCartToLS();
         showCart();
     }
 
@@ -63,7 +63,7 @@ $.getJSON('goods.json', function (data) {
 });
 
 function checkCart() {
-    //проверяю наличие корзины в localStorage;
+    
     if (localStorage.getItem('cart') != null) {
         cart = JSON.parse(localStorage.getItem('cart'));
     }
@@ -72,50 +72,3 @@ function checkCart() {
 function saveCartToLS() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
-
-$(document).ready(function () {
-    loadCart();
-    $('.send-email').on('click', sendEmail); // отправить письмо с заказом
- });
- function loadCart() {
-    //проверяю есть ли в localStorage запись cart
-    if (localStorage.getItem('cart')) {
-        // если есть - расширфровываю и записываю в переменную cart
-        cart = JSON.parse(localStorage.getItem('cart'));
-            showCart();
-        }
-    else {
-        $('.main-cart').html('Корзина пуста!');
-    }
-}
-function sendEmail() {
-    var ename = $('#ename').val();
-    var email = $('#email').val();
-    var ephone = $('#ephone').val();
-    if (ename!='' && email!='' && ephone!='') {
-        if (isEmpty(cart)) {
-            $.post(
-                "core/mail.php",
-                {
-                    "ename" : ename,
-                    "email" : email,
-                    "ephone" : ephone,
-                    "cart" : cart
-                },
-                function(data){
-                    if (data==1) {
-                        alert('Заказ отправлен');
-                    }
-                    else {
-                        alert('Повторите заказ');
-                    }
-                }
-            );
-        }
-        else {
-            alert('Корзина пуста');
-        }
-    }
-    else {
-        alert('Заполните поля');
-    }}

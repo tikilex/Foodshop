@@ -118,4 +118,4 @@ function sendEmail() {
     }
     else {
         alert('Заполните поля');
-    }
+    }}
